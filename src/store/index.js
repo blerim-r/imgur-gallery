@@ -6,10 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     images: [],
+    galleryLoading: false,
   },
   mutations: {
     updateImages(state, data) {
       state.images = data;
+    },
+    updateGalleryLoading(state, data) {
+      state.galleryLoading = data;
     }
   },
   actions: actions

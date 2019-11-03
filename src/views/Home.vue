@@ -1,22 +1,16 @@
 <template>
-  <div class="home">
-    <h1>
-      Test
-    </h1>
-  </div>
+  <v-container>
+    <filter-component/>
+    <gallery-component/>
+  </v-container>
 </template>
 
 <script>
-    import {mapActions} from 'vuex';
+  import FilterComponent from "../components/FilterComponent";
+  import GalleryComponent from "../components/GalleryComponent";
 
     export default {
         name: 'home',
-        methods: {
-            ...mapActions(["getGalleryImages"])
-        },
-        mounted() {
-            const res = this.getGalleryImages();
-            console.log(res);
-        }
+        components: {GalleryComponent, FilterComponent}
     }
 </script>
