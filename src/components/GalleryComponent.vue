@@ -4,7 +4,7 @@
         :length="totalPages"
         v-model="page"
     ></v-pagination>
-    <v-col cols="12" offset-sm="3" sm="6">
+    <v-col cols="12">
       <v-card>
         <v-container fluid>
           <v-col class="ma-auto" cols="9">
@@ -22,7 +22,10 @@
             <v-col
                 :key="image.id"
                 class="d-flex child-flex"
-                cols="4"
+                xs="12"
+                sm="4"
+                md="3"
+                lg="2"
                 v-for="image in filteredImages"
             >
               <v-card class="d-flex flex-column-reverse" flat tile>
@@ -34,7 +37,7 @@
                   >
                   </v-img>
                 </router-link>
-                <v-toolbar-title :title="image.title"> {{ image.title }}</v-toolbar-title>
+                <v-toolbar-title> {{ image.title }}</v-toolbar-title>
               </v-card>
             </v-col>
           </v-row>
