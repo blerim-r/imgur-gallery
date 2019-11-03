@@ -20,6 +20,7 @@
 
           <v-row>
             <v-col
+                :title="image.title"
                 :key="image.id"
                 class="d-flex child-flex"
                 xs="12"
